@@ -1,0 +1,10 @@
+import pandas as pd 
+df=pd.read_csv("auto-mpg.csv")
+
+sa=df.describe()
+cy=df[df["cylinders"]==4]
+ei=df.groupby('model year')['model year'].count()
+
+print("Statistical details of dataset:", sa)
+print("All cars with 4 cylinders:",cy)
+print("No of manufactured cars in each year:",ei)
